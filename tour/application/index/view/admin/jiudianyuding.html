@@ -1,0 +1,74 @@
+<!doctype html>
+<html class="no-js">
+<head>
+<meta charset="utf-8">
+<title>酒店预定</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<meta name="renderer" content="webkit">
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+<meta name="apple-mobile-web-app-title" content="Amaze UI" />
+<link rel="stylesheet" href="__STATIC__/admin/assets/css/amazeui.min.css"/>
+<link rel="stylesheet" href="__STATIC__/admin/assets/css/admin.css">
+<script src="__STATIC__/admin/assets/js/jquery.min.js"></script>
+<script src="__STATIC__/admin/assets/js/app.js"></script>
+</head>
+<body>
+</head>
+
+<body>
+<header class="am-topbar admin-header">
+  <div class="am-topbar-brand"><img src="__STATIC__/admin/assets/i/logo.png"></div>
+  <div class="am-collapse am-topbar-collapse" id="topbar-collapse">
+    <ul class="am-nav am-nav-pills am-topbar-nav admin-header-list">
+
+      <li class="am-hide-sm-only" style="float: right;"><a href="javascript:;" id="admin-fullscreen"><span class="am-icon-arrows-alt"></span> <span class="admin-fullText">开启全屏</span></a></li>
+    </ul>
+  </div>
+</header>
+
+<div class="am-cf admin-main"> 
+
+{include file="common/left" /}
+<div class="admin-biaogelist">
+
+    <div class="listbiaoti am-cf">
+      <ul class="am-icon-flag on">酒店预定管理</ul>
+      
+      <dl class="am-icon-home" style="float: right;"> 当前位置： 酒店预定列表 > <a href="{:url('index')}">首页</a></dl>    
+    </div>
+    <volist name='re' id='re'>
+    <form class="am-form am-g" action="#" method="post">
+          <table width="100%" class="am-table am-table-bordered am-table-radius am-table-striped">
+            <thead>
+              <tr class="am-success">
+                <th class="table-check"><input type="checkbox" /></th>
+                <th class="table-id">ID</th>
+                <th class="table-title">游客名称</th>
+                <th class="table-type">房间类型名称</th>
+                <th class="table-author am-hide-sm-only">房间预定时间</th>
+              </tr>
+            </thead>
+            <tbody>
+            {volist name="re" id="er"}
+             <tr>
+                <td><input type="checkbox" /></td>
+                <td>{$er.id}</td>
+                <td>{$er.username}</td>
+                <td>{$er.name}</td>
+                <td class="am-hide-sm-only">{$er.time|date="Y-m-d H:i:s",###}</td>
+              </tr>
+            {/volist}             
+            </tbody>
+          </table>
+        </form>
+        </volist>
+<div class="foods">
+      <ul>后台管理系统</ul>
+      <dl><a href="" title="返回头部" class="am-icon-btn am-icon-arrow-up"></a></dl>    
+    </div>
+</div>
+</div>
+</div>
+</body>
+<script src="__STATIC__/admin/assets/js/amazeui.min.js"></script>
+</html>

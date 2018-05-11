@@ -1,0 +1,42 @@
+<div class="nav-navicon admin-main admin-sidebar">
+    
+    
+    <div class="sideMenu am-icon-dashboard" style="color:#aeb2b7; margin: 10px 0 0 0;"> 欢迎系统管理员：{$Think.session.admin} <a href="{:url('index/index')}" style="color: #aeb2b7;">注销</a></div>
+    <div class="sideMenu">
+      <h3 class="am-icon-flag"><em></em> <a href="#">酒店信息管理</a></h3>
+      <ul style="list-style: none;">
+        <li><a href="{:url('fangjianliebiao')}">房间列表</a></li>
+        <li class="func" dataType='html' dataLink='msn.htm' iconImg='images/msn.gif'><a href="{:url('tianjiafangjian')}">添加房间</a></li>        
+      </ul>
+
+      <h3 class="am-icon-cart-plus"><em></em> <a href="#">旅游线路管理</a></h3>
+      <ul style="list-style: none;">
+        <li><a href="{:url('xianluliebiao')}">线路列表</a></li>
+        <li class="func" dataType='html' dataLink='msn.htm' iconImg='images/msn.gif'><a href="{:url('tianjiaxianlu')}">添加线路</a></li>
+      </ul>
+
+      <h3 class="am-icon-users"><em></em> <a href="#">旅游预定管理</a></h3>
+      <ul style="list-style: none;">
+        <li><a href="{:url('jiudianyuding')}">酒店预定列表</a></li>
+        <li><a href="{:url('jingdianyuding')}">线路预定列表</a></li>
+      </ul>
+
+      <h3 class="am-icon-volume-up"><em></em> <a href="#">景点评论管理</a></h3>
+      <ul style="list-style: none;">
+        <li><a href="{:url('liuyanliebiao')}">留言列表</a></li>
+      </ul>
+
+    </div>
+    
+    <script type="text/javascript">
+      jQuery(".sideMenu").slide({
+        titCell:"h3", //鼠标触发对象
+        targetCell:"ul", //与titCell一一对应，第n个titCell控制第n个targetCell的显示隐藏
+        effect:"slideDown", //targetCell下拉效果
+        delayTime:300 , //效果时间
+        triggerTime:150, //鼠标延迟触发时间（默认150）
+        defaultPlay:true,//默认是否执行效果（默认true）
+        returnDefault:true //鼠标从.sideMen移走后返回默认状态（默认false）
+        });
+    </script>    
+</div>

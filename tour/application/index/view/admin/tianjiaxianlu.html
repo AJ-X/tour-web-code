@@ -1,0 +1,94 @@
+<!doctype html>
+<html class="no-js">
+<head>
+<meta charset="utf-8">
+<title>添加线路</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<meta name="renderer" content="webkit">
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+<meta name="apple-mobile-web-app-title" content="Amaze UI" />
+<link rel="stylesheet" href="__STATIC__/admin/assets/css/amazeui.min.css"/>
+<link rel="stylesheet" href="__STATIC__/admin/assets/css/admin.css">
+<script src="__STATIC__/admin/assets/js/jquery.min.js"></script>
+<script src="__STATIC__/admin/assets/js/app.js"></script>
+</head>
+<body>
+</head>
+
+<body>
+<header class="am-topbar admin-header">
+  <div class="am-topbar-brand"><img src="__STATIC__/admin/assets/i/logo.png"></div>
+  <div class="am-collapse am-topbar-collapse" id="topbar-collapse">
+    <ul class="am-nav am-nav-pills am-topbar-nav admin-header-list">
+
+      <li class="am-hide-sm-only" style="float: right;"><a href="javascript:;" id="admin-fullscreen"><span class="am-icon-arrows-alt"></span> <span class="admin-fullText">开启全屏</span></a></li>
+    </ul>
+  </div>
+</header>
+
+<div class="am-cf admin-main"> 
+
+{include file="common/left" /} 
+
+<div class=" admin-content">
+
+<div class="admin-biaogelist">
+  
+    <div class="listbiaoti am-cf">
+      <ul class="am-icon-flag on"> 添加线路</ul>
+      
+      <dl class="am-icon-home" style="float: right;"> 当前位置： 添加线路 > <a href="{:url('index')}">首页</a></dl>
+
+      
+      
+    </div>
+  
+    <div class="fbneirong">
+      <form class="am-form" enctype="multipart/form-data" action="{:url('xianlutianjia')}" method="post">
+        <div class="am-form-group am-cf">
+          <div class="zuo">线路名称：</div>
+          <div class="you">
+            <input type="text" name="title" class="am-input-sm" id="doc-ipt-email-1" placeholder="请输入线路名称">
+          </div>
+        </div>
+        <div class="am-form-group am-cf">
+          <div class="zuo">简介：</div>
+          <div class="you">
+            <input type="text" name="detail" class="am-input-sm" id="doc-ipt-pwd-1" placeholder="请输入简介称">
+          </div>
+        </div>
+        <div class="am-form-group am-cf">
+          <div class="zuo">行程概要：</div>
+          <div class="you">
+            <input type="text" name="road" class="am-input-sm" id="doc-ipt-email-1" placeholder="请输入行程概要">
+          </div>
+        </div>
+        <div class="am-form-group am-cf">
+          <div class="zuo">景点推荐：</div>
+          <div class="you">
+            <input type="text" name="message" class="am-input-sm" id="doc-ipt-pwd-1" placeholder="请输入景点推荐">
+          </div>
+        </div>
+        <div class="am-form-group am-cf">
+          <div class="zuo">图片：</div>
+          <div class="you">
+            <input type="file" name="pic" accept="image/png, image/jpeg, image/gif, image/jpg">
+          </div>
+        </div>
+        <div class="am-form-group am-cf">
+          <div class="you" style="margin-left: 11%;">
+              <button type="submit" class="am-btn am-btn-success am-radius">添加</button>
+          </div>
+        </div>
+      </form>
+    </div> 
+ <div class="foods">
+      <ul>后台管理系统</ul>
+      <dl><a href="" title="返回头部" class="am-icon-btn am-icon-arrow-up"></a></dl>    
+    </div>
+</div>
+</div>
+</div>
+<script src="__STATIC__/admin/assets/js/amazeui.min.js"></script>
+</body>
+</html>
